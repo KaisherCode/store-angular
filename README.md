@@ -52,5 +52,7 @@ module.exports = {
 
 - `ng g c domains/products/pages/list`
 
+## Página que provee servicio en línea de imágenes aleatorios
 
+- `https://picsum.photos/640/640`
 
