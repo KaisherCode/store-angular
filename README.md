@@ -24,4 +24,33 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/
+tools/cli) page.
+
+
+## Crear proyecto
+
+- `ng new store --standalone --skip-tests`
+- Ingresar a la carpeta del proyecto `cd store`
+- Integración de framework tailwindcss `npm install -D tailwindcss postcss autoprefixer` y `npx tailwindcss init`
+- Configurar la plantilla de rutas `tailwind.config.js`
+  
+```js
+  /** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+```
+## Creando componnetes en Angular
+
+- `ng g c domains/products/pages/list`
+
+
+
