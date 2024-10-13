@@ -1,8 +1,7 @@
 <div class="grid grid-cols-3 gap-8">
-  <app-product img="https://picsum.photos/640/640?r=24" title="Mouse teros negro" [price]="25" (addTocart)="fromChild($event)"/>
-  <app-product img="https://picsum.photos/640/640?r=25" title="Teclado teros negro" [price]="45" (addTocart)="fromChild($event)"/>
-  <app-product img="https://picsum.photos/640/640?r=26" title='Smartphone XIAOMI Redmi' [price]="480" (addTocart)="fromChild($event)"/>
-  <app-product img="https://picsum.photos/640/640?r=27" title="Disco solido SSD 240 GB" [price]="150" (addTocart)="fromChild($event)"/>
-  <app-product img="https://picsum.photos/640/640?r=28" title="Memoria RAM 8GB Kingston" [price]="80" (addTocart)="fromChild($event)"/>
-  <app-product img="https://picsum.photos/640/640?r=29" title="Case termaltake negro" [price]="140" (addTocart)="fromChild($event)"/>
+<app-product
+*ngFor="let product of products()"
+[product]="product"
+(addTocart)="fromChild($event)"
+/>
 </div>
