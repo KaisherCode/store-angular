@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, Input, signal, SimpleChanges } from '@angular/core';
 import { repeat } from 'rxjs';
 
 @Component({
@@ -9,10 +9,12 @@ import { repeat } from 'rxjs';
   styleUrl: './counter.component.css'
 })
 export class CounterComponent {
-  @Input({required: true}) duration: number=0;
-  @Input({required: true}) message: string = '';
+  @Input({ required: true }) duration: number = 0;
+  @Input({ required: true }) message: string = '';
+  counter = signal(0);
+  counterRef: number | undefined;
 
-  constructor(){
+  constructor() {
     // NO ASYNC
     // before render
     // una vez
@@ -20,40 +22,45 @@ export class CounterComponent {
     console.log('_'.repeat(10));
   }
 
-  ngOnChanges(changes: SimpleChanges){
+  ngOnChanges(changes: SimpleChanges) {
     // before and during render
     console.log('ngOnChanges');
     console.log('_'.repeat(10)),
-    console.log(changes);
+      console.log(changes);
     const duration = changes['duration'];
-    if(duration && duration.currentValue !== duration.previousValue){
+    if (duration && duration.currentValue !== duration.previousValue) {
       this.doSomething();
     }
   }
 
-  ngOnInit(){
+  ngOnInit() {
     // after render
     // una vez
     // async, then, subs
     console.log('ngOnInit');
     console.log('_'.repeat(10));
-    console.log('duration',this.duration);
-    console.log('message',this.message);
+    console.log('duration', this.duration);
+    console.log('message', this.message);
+    this.counterRef = window.setInterval(() => {
+      console.log('run interval')
+      this.counter.update(statePrev => statePrev + 1);
+    }, 1000)
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     // after render
     // hijos ya fueron pintados
     console.log('ngAfterViewInit');
     console.log('_'.repeat(10));
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     console.log('ngOnDestroy');
     console.log('_'.repeat(10));
+    window.clearInterval(this.counterRef)
   }
 
-  doSomething(){
+  doSomething() {
     console.log('change duration')
     // async
   }
