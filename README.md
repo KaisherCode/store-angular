@@ -59,3 +59,7 @@ module.exports = {
 ## Página para crear audio
 
 - `https://wavesurfer.xyz/`
+
+## Crear musica con IA 
+
+- `https://stableaudio.com/`
