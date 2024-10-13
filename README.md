@@ -56,3 +56,6 @@ module.exports = {
 
 - `https://picsum.photos/640/640`
 
+## Página para crear audio
+
+- `https://wavesurfer.xyz/`

@@ -1,9 +1,18 @@
-<p>
+<!-- <p>
   <input type="number" [value]="duration()" (change)="changeDuration($event)">
 </p>
 <p>
   <input type="text" [value]="message()" (change)="changeMessage($event)">
-</p>
-<p>
-  <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0"/>
-</p>
+</p> -->
+<div class="px-10">
+  <h1 class="text-lg font-bold">About</h1>
+  <p class="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat doloribus hic, dignissimos, possimus cupiditate repellendus sapiente accusamus optio deserunt eaque commodi! Sint voluptas dolores deserunt aspernatur. Iste non quibusdam rem.</p>
+  <p class="text-sm">
+    Número de clientes
+    <!-- <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0"/> -->
+  </p>
+  <div>
+    <app-wave-audio audioUrl="audio.mp3"/>
+  </div>
+</div>
+
