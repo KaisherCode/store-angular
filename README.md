@@ -63,3 +63,29 @@ module.exports = {
 ## Crear musica con IA 
 
 - `https://stableaudio.com/`
+
+
+## Instalar driver de vercel
+
+```sh
+npm install -g vercel
+```
+
+```sh
+vercel
+Vercel CLI 37.12.1
+> No existing credentials found. Please log in:
+? Log in to Vercel Continue with GitHub
+> Please visit the following URL in your web browser:
+> Success! GitHub authentication complete for name@gmail.com 
+? Set up and deploy "~\Desktop\develop\angular\store"? yes
+? Which scope do you want to deploy to? kaishercode's projects
+? Link to existing project? no
+? What’s your project’s name? store
+- Development Command: ng serve --port $PORT
+- Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+- Output Directory: dist
+? Want to modify these settings? no
+```
+
+Producción: https://store-25vz6ixsj-kaishercodes-projects.vercel.app
